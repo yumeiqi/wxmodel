@@ -104,7 +104,7 @@ module.exports = function(grunt) {
                 var html = grunt.file.read('.tmp/template.html');
                 res.end(html);
               } else {
-                res.end(grunt.file.read('src' + req.url));
+                res.end(grunt.file.read('src' + req.url.split('?')[0]));
               }
             }
           ]
