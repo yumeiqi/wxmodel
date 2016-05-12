@@ -1,0 +1,22 @@
+{
+  "name": "material-template-scaffold",
+  "version": "0.0.1",
+  "description": "material template scaffold",
+  "repository": {
+    "type": "git",
+    "url": "git@git.weixinhost.com:shenlin/material-template-scaffold.git"
+  },
+  "author": "shenlin",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-text-replace": "^0.4.0",
+    "grunt-usemin": "^3.1.1"
+  }
+}
