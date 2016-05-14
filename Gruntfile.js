@@ -138,6 +138,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function(target) {
+    if (!grunt.file.exists('src/template.html')) {
+      grunt.fail.fatal('src目录下不存在template.html文件，无法继续！');
+    }
+
     grunt.task.run([
       'clean:server',
       'replace:server',
