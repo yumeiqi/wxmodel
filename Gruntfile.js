@@ -148,6 +148,26 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build', function(target) {
+    if (!grunt.file.exists('src/template.html')) {
+      grunt.fail.fatal('src目录下不存在template.html文件，无法继续！');
+    }
+
+    if (!grunt.file.exists('src/config.json')) {
+      grunt.fail.fatal('src目录下不存在config.json文件，无法继续！');
+    }
+
+    var config = grunt.file.read('src/config.json');
+    config = config.replace(/\/\/.*/gm, '').replace(/\s/g, '');
+    if (!config) {
+      grunt.fail.warn('src/config.json中还没有配置模板字段。');
+    } else {
+      try {
+        JSON.parse(config);
+      } catch (e) {
+        grunt.fail.fatal('src/config.json内容不是正确的json，请仔细检查！任务终止。' + e);
+      }
+    }
+
     var tasks = [
       'clean',
       'useminPrepare',
