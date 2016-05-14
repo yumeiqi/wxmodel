@@ -122,6 +122,18 @@ module.exports = function(grunt) {
         ]
       }
     },
+
+    htmlmin: { // Task 
+      dist: { // Target 
+        options: { // Target options 
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: { // Dictionary of files 
+          'dist/template.html': '.tmp/template.html', // 'destination': 'source' 
+        }
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-text-replace');
@@ -133,6 +145,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function(target) {
     if (!grunt.file.exists('src/template.html')) {
@@ -176,6 +189,7 @@ module.exports = function(grunt) {
       'uglify:generated',
       'copy:dist',
       'usemin',
+      'htmlmin:dist',
     ];
 
     grunt.task.run(tasks);
