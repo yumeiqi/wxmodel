@@ -57,19 +57,21 @@ module.exports = function(grunt) {
         replacements: [{
           from: /<%([^%]+)%>/g,
           to: function(matchWord, index, fullText, matches) {
-            var fields = grunt.file.readJSON('src/fields.json');
-            if (fields.hasOwnProperty(matches[0])) {
-              switch(typeof fields[matches[0]]) {
-                case 'object':
-                case 'array':
-                  return JSON.stringify(fields[matches[0]]);
-                  break;
-                default:
-                  return fields[matches[0]];
+            if (grunt.file.exists('src/fields.json')) {
+              var fields = grunt.file.readJSON('src/fields.json');
+              if (fields.hasOwnProperty(matches[0])) {
+                switch (typeof fields[matches[0]]) {
+                  case 'object':
+                  case 'array':
+                    return JSON.stringify(fields[matches[0]]);
+                    break;
+                  default:
+                    return fields[matches[0]];
+                }
               }
-            } else {
-              return matchWord;
             }
+
+            return matchWord;
           }
         }]
       }
