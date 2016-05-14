@@ -50,7 +50,7 @@ module.exports = function(grunt) {
       },
       server: {
         src: ['src/template.html'],
-        dest: '.tmp/',
+        dest: '.tmp/index.html',
         options: {
           processTemplates: false,
         },
@@ -93,23 +93,13 @@ module.exports = function(grunt) {
       options: {
         port: 8080,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: '0.0.0.0',
+        hostname: 'localhost',
         livereload: 35730
       },
       livereload: {
         options: {
-          open: 'http://0.0.0.0:8080/template.html',
-          base: 'src',
-          middleware: [
-            function (req, res, next) {
-              if(req.url == '/template.html') {
-                var html = grunt.file.read('.tmp/template.html');
-                res.end(html);
-              } else {
-                res.end(grunt.file.read('src' + req.url.split('?')[0]));
-              }
-            }
-          ]
+          open: true,
+          base: ['src', '.tmp'],
         }
       },
     },
