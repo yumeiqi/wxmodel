@@ -27,27 +27,24 @@ module.exports = function(grunt) {
       }
     },
 
+    usemin: {
+      html: '.tmp/template.html',
+      options: {
+        assetsDirs: [
+          '.tmp',
+        ],
+        blockReplacements: {
+          css: function(block) {
+            return '<style>' + grunt.file.read('.tmp/' + block.dest) + '</style>';
+          },
+          js: function(block) {
+            return '<script>' + grunt.file.read('.tmp/' + block.dest) + '</script>';
+          }
+        }
+      }
+    },
+
     replace: {
-      dist: {
-        src: ['src/template.html'],
-        dest: '.tmp/',
-        options: {
-          processTemplates: false,
-        },
-        replacements: [{
-          from: /<!-- build:js main\.js -->[\s\S]*?<!-- endbuild -->/g,
-          to: function() {
-            var js = grunt.file.read('.tmp/main.js');
-            return '<script>' + js + '</script>';
-          }
-        }, {
-          from: /<!-- build:css main\.css -->[\s\S]*?<!-- endbuild -->/g,
-          to: function() {
-            var css = grunt.file.read('.tmp/main.css');
-            return '<style>' + css + '</style>';
-          }
-        }]
-      },
       server: {
         src: ['src/template.html'],
         dest: '.tmp/index.html',
@@ -80,8 +77,8 @@ module.exports = function(grunt) {
     copy: {
       dist: {
         files: [{
-          src: ['.tmp/template.html'],
-          dest: 'dist/template.html',
+          src: ['src/template.html'],
+          dest: '.tmp/template.html',
         }, {
           src: ['src/config.json'],
           dest: 'dist/config.json',
@@ -150,15 +147,19 @@ module.exports = function(grunt) {
     ]);
   });
 
-  grunt.registerTask('build',[
-    'clean',
-    'useminPrepare',
-    'concat:generated',
-    'cssmin:generated',
-    'uglify:generated',
-    'replace:dist',
-    'copy:dist',
-  ])
+  grunt.registerTask('build', function(target) {
+    var tasks = [
+      'clean',
+      'useminPrepare',
+      'concat:generated',
+      'cssmin:generated',
+      'uglify:generated',
+      'copy:dist',
+      'usemin',
+    ];
+
+    grunt.task.run(tasks);
+  });
 
   // 默认被执行的任务列表。
   grunt.registerTask('default', ['build']);
