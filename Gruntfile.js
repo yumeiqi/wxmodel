@@ -170,7 +170,7 @@ module.exports = function(grunt) {
     }
 
     var config = grunt.file.read('src/config.json');
-    config = config.replace(/\/\/.*/gm, '').replace(/\s/g, '');
+    config = config.replace(/\s/g, '');
     if (!config) {
       grunt.fail.warn('src/config.json中还没有配置模板字段。');
     } else {
