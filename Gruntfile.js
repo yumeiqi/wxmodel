@@ -79,8 +79,11 @@ module.exports = function(grunt) {
         files: [{
           src: ['src/template.html'],
           dest: '.tmp/template.html',
-        }, {
-          src: ['src/config.json'],
+        }]
+      },
+      config: {
+        files: [{
+          src: ['.tmp/config.json'],
           dest: 'dist/config.json',
         }]
       }
@@ -175,14 +178,18 @@ module.exports = function(grunt) {
       grunt.fail.warn('src/config.json中还没有配置模板字段。');
     } else {
       try {
-        JSON.parse(config);
+        config = JSON.parse(config);
       } catch (e) {
         grunt.fail.fatal('src/config.json内容不是正确的json，请仔细检查！任务终止。' + e);
       }
+      config = JSON.stringify(config);
+      grunt.file.write('.tmp/config.json', config);
     }
 
     var tasks = [
-      'clean',
+      'clean:dist',
+      'copy:config',
+      'clean:server',
       'useminPrepare',
       'concat:generated',
       'cssmin:generated',
