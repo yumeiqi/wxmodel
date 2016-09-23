@@ -1,3 +1,19 @@
+<a name="0.0.4"></a>
+## [0.0.4](shenlin/material-template-scaffold/compare/0.0.3...v0.0.4) (2016-09-23)
+
+
+### Bug Fixes
+
+* **gruntfile/config.json:** 不再移除注释，因为可能误判 ([0df1e67](shenlin/material-template-scaffold/commits/0df1e67))
+
+
+### Features
+
+* **build/config.json:** 压缩模板配置文件 ([a3edcee](shenlin/material-template-scaffold/commits/a3edcee))
+* **config.json:** 添加示例 ([e730883](shenlin/material-template-scaffold/commits/e730883))
+
+
+
 <a name="0.0.3"></a>
 ## [0.0.3](/http://git.weixinhost.com/shenlin/material-template-scaffold/compare/0.0.2...v0.0.3) (2016-05-14)
 
