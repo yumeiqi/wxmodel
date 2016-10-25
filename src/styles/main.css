@@ -52,5 +52,27 @@ header p{
 
 
 }
+.hyperlink{
+    /*width:1115px;
+    height:200px;*/
+    width: 330px;
+    height: 70px;
+    border: 0.05px solid white;
+    margin-left: 15px;
+    background-color: white;
+}
 
+.hyperlink_p{
+    margin: 25px 0 0 20px;
+    float: left;
+}
+.hyperlink_img{
+    /*width:60px;
+    height:60px;*/
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    margin-left: 280px;
+    margin-top: 20px;
+} 
 
