@@ -1,7 +1,7 @@
 [
     {
         "name": "title",
-        "title": "这是一个模板配置文件的示例",
+        "title": "标题",
         "require": 1,
         "readonly": 0,
         "hide": 0,
@@ -25,5 +25,14 @@
         "value": "",
         "type": "image",
         "placeholder": "建议：900 x 500"
-    }
+    }, {
+        "name": "hyperlink_name",
+        "title": "超链接标题",
+        "require": 1,
+        "readonly": 0,
+        "hide": 0,
+        "value": "",
+        "type": "text",
+        "maxLength": 16
+    },
 ]

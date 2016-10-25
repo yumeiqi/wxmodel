@@ -1,8 +1,5 @@
 {
-	"key1": "value1",
-	"key2": 21,
-	"key3": {
-		"say": "hello"
-	},
-	"key4": [1, 2, 3]
+	"title": "WeUI",
+	"digest": "WeUI 是一套同微信原生视觉体验一致的基础样式库",
+    "hyperlink_name": "菜单项目一"
 }
