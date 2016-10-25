@@ -76,3 +76,31 @@ header p{
     margin-top: 20px;
 } 
 
+footer{
+    position:absolute;
+    bottom:0px;
+    height: 40px;
+    right: 30%;
+    left: 27%;
+
+}
+
+footer div{
+    width: 180px;
+    height: 30px;
+    background-color: #ededed;
+    border-radius: 5px;
+    text-align: center;
+}
+
+footer div p{
+    font-size: 13px;
+    padding-top: 6px;
+    color: #a3a3a3;
+}
+
+footer div p a{
+    color: #29cc57;
+    text-decoration: none;
+}
+
