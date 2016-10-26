@@ -1,6 +1,7 @@
 body{
     background: #f4f4f4;
     font-family: 'Microsoft YaHei';
+    position: relative;
 
 }
 
@@ -11,22 +12,15 @@ p {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
 }
-
+/*iphone6*/
 /*header*/
 header{
-    /*width: 1242px;
-    height: 300px;*/
     height: 100px;
-    background-color: #29cc57;
     margin: -8px;
     margin-bottom: 25px;
 }
 
 header div{
-
-    /*padding: 20px 0 0 20px;
-    width: 140px;
-    height: 45px;*/
     width: 70px;
     height: 22.5px;    
     padding: 30px 0 0 30px;
@@ -34,17 +28,15 @@ header div{
 
 }
 
+/*内容*/
+
 header p{
-    /*font-size: 45px;*/
     color: white;
     font-size: 22.5px;
     padding: 0px;
 }
 
 .header_p{
-    /*width:830px;
-    height:40px;
-    font-size: 40px;*/
     width: 340px;
     height: 14px;
     font-size: 14px;
@@ -53,54 +45,143 @@ header p{
 
 }
 .hyperlink{
-    /*width:1115px;
-    height:200px;*/
-    width: 330px;
-    height: 70px;
+    width: 90%;
+    height: 60px;
     border: 0.05px solid white;
-    margin-left: 15px;
+    margin-left:5%;
     background-color: white;
+    margin-bottom: 10px;
+}
+
+.hyperlink_p{
+    margin: 20px 0 0 20px;
+    float: left;
+}
+
+.hyperlink_p{
+    font-size: 16px;
+    font-weight: 500;
+
+}
+.hyperlink_img{
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    margin-left: 85%;
+    margin-top: 20px;
+} 
+
+/*footer*/
+
+footer{
+    position:fixed;
+    bottom:10px;
+    text-align: center;
+    left: 0;
+    width: 100%;
+}
+
+footer p{
+    font-size: 13px;
+    padding-top: 6px;
+    color: #a3a3a3;
+}
+
+footer p span{
+    background-color: #ededed;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+}
+
+footer  p a{
+    color: #29cc57;
+    text-decoration: none;
+}
+
+/*iphone5*/
+@media screen and (max-width: 320px) {
+
+    /*header*/
+header{
+
+    width: 320px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+header div{
+    width: 70px;
+    height: 22.5px;    
+    padding: 20px 0 0 25px;
+}
+
+/*内容*/
+
+header p{
+    font-size: 19px;
+}
+
+.header_p{
+    width: 280px;
+    height: 14px;
+    font-size: 8px;
 }
 
 .hyperlink_p{
     margin: 25px 0 0 20px;
     float: left;
 }
-.hyperlink_img{
-    /*width:60px;
-    height:60px;*/
-    width: 25px;
-    height: 25px;
-    border: 1px solid black;
-    margin-left: 280px;
-    margin-top: 20px;
-} 
 
-footer{
-    position:absolute;
-    bottom:0px;
-    height: 40px;
-    right: 30%;
-    left: 27%;
+.hyperlink_p{
+    font-size: 14px;
+    font-weight: 500;
 
 }
+.hyperlink_img{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    margin-left: 85%;
+} 
+
+/*footer*/
+
 
 footer div{
     width: 180px;
-    height: 30px;
-    background-color: #ededed;
-    border-radius: 5px;
-    text-align: center;
+    height: 25px;
 }
 
 footer div p{
-    font-size: 13px;
-    padding-top: 6px;
-    color: #a3a3a3;
+    font-size: 12px;
+    padding-top: 3px;
+}
+    
 }
 
-footer div p a{
-    color: #29cc57;
-    text-decoration: none;
-}
+// .parallax > use{
+//   animation:move-forever 6s linear infinite;
+//   &:nth-child(1){animation-delay:-2s;}
+//   &:nth-child(2){animation-delay:-4s; animation-duration:10s}
+//   &:nth-child(3){animation-delay:-8s; animation-duration:6s}
+// }
 
+// @keyframes move-forever{
+//   0%{transform: translate(-90px , 0%)}
+//   100%{transform: translate(85px , 0%)} 
+// }
+
+
+
+// .editorial {
+//   display: block;
+//   width: 100%;
+//   height: 2em;
+//   margin: 0;
+// }
+
+// .content {
+//   background-color: #29cc57;
+//   min-height: 5vh;
+//   margin: -.1em 0 0 0;
+// }

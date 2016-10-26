@@ -17,22 +17,59 @@
         "value": "",
         "type": "textarea"
     }, {
-        "name": "thumb_media_url",
-        "title": "封面图",
+        "name": "theme_color",
+        "title": "主题色",
         "require": 0,
         "readonly": 0,
         "hide": 0,
         "value": "",
-        "type": "image",
-        "placeholder": "建议：900 x 500"
-    }, {
-        "name": "hyperlink_name",
-        "title": "超链接标题",
-        "require": 1,
-        "readonly": 0,
-        "hide": 0,
-        "value": "",
-        "type": "text",
-        "maxLength": 16
-    },
+        "type": "color"
+    },{
+        "name":"item_name",
+        "title":"URL名称",
+        "require":0,
+        "readonly":0,
+        "hide":0,
+        "type":"text"
+        },{"name":"item_img",
+        "title":"url图片",
+        "require":0,
+        "readonly":0,
+        "hide":0,
+        "type":"image",
+        "placeholder": "正方形图片"
+    }
+
+
+
+    // , {"name":"hyperlink",
+    //     "title":"创建超链接",
+    //     "require":1,
+    //     "readonly":0,
+    //     "hide":0,
+    //     "value":"",
+    //     "type":"list",
+    //     "itemName":"url",
+    //     "items":[
+    //         {"name":"item_name",
+    //         "title":"URL名称",
+    //         "require":0,
+    //         "readonly":0,
+    //         "hide":0,
+    //         "type":"text"
+    //         },{"name":"item_hyperlink",
+    //         "title":"URL地址",
+    //         "require":1,
+    //         "readonly":0,
+    //         "hide":0,
+    //         "type":"url",
+    //         },{"name":"item_img",
+    //         "title":"url图片",
+    //         "require":0,
+    //         "readonly":0,
+    //         "hide":0,
+    //         "type":"image",
+    //         "placeholder": "正方形图片"
+    //         }]
+    // }
 ]
