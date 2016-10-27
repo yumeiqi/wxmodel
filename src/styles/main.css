@@ -1,7 +1,7 @@
 body{
     background: #f4f4f4;
     font-family: 'Microsoft YaHei';
-    position: relative;
+    border:none;
 
 }
 
@@ -11,6 +11,10 @@ p {
     -webkit-margin-after: 0em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
+}
+
+a{
+    color: #000000;
 }
 /*iphone6*/
 /*header*/
@@ -23,7 +27,7 @@ header{
 header div{
     width: 70px;
     height: 22.5px;    
-    padding: 30px 0 0 30px;
+    padding: 0 0 0 30px;
 
 
 }
@@ -32,15 +36,16 @@ header div{
 
 header p{
     color: white;
-    font-size: 22.5px;
-    padding: 0px;
+    font-size: 21px;
+    padding-top:20px;
 }
 
 .header_p{
     width: 340px;
     height: 14px;
-    font-size: 14px;
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.7);
+    margin-top: -20px;
 
 
 }
@@ -59,23 +64,29 @@ header p{
 }
 
 .hyperlink_p{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
 
 }
 .hyperlink_img{
-    width: 25px;
-    height: 25px;
-    border: 1px solid black;
-    margin-left: 85%;
+    width: 20px;
+    height: 20px;
+    margin-left: 90%;
     margin-top: 20px;
+}
+.hyperlink_img img{
+    width: 100%;
 } 
+
+.all{
+    padding-bottom: 65%;
+}
 
 /*footer*/
 
 footer{
-    position:fixed;
-    bottom:10px;
+    position:relative;
+    bottom:0px;
     text-align: center;
     left: 0;
     width: 100%;
@@ -98,6 +109,50 @@ footer  p a{
     text-decoration: none;
 }
 
+/*飘动的header*/
+
+.parallax > use{
+  animation:move-forever 6s linear infinite;
+  &:nth-child(1){animation-delay:-2s;}
+  &:nth-child(2){animation-delay:-4s; animation-duration:10s}
+  &:nth-child(3){animation-delay:-8s; animation-duration:6s}
+}
+
+@keyframes move-forever{
+  0%{transform: translate(-90px , 0%)}
+  100%{transform: translate(85px , 0%)} 
+}
+
+
+
+.editorial {
+  display: block;
+  width: 100%;
+  height: 5em;
+  margin: 0;
+
+
+}
+
+.content {
+  background-color: #f4f4f4;
+  min-height: 3vh;
+  margin: -.1em 0 0 0;
+  width: 92%;
+}
+
+.parallax .color{
+    fill: rgba(244, 244, 244, 0.3);
+}
+
+.parallax .color1{
+    fill: rgba(244, 244, 244, 0.4);
+}
+
+.parallax .color2{
+    fill: rgb(244, 244, 244);
+}
+
 /*iphone5*/
 @media screen and (max-width: 320px) {
 
@@ -109,7 +164,7 @@ header{
     margin-bottom: 20px;
 }
 
-header div{
+header text{
     width: 70px;
     height: 22.5px;    
     padding: 20px 0 0 25px;
@@ -123,12 +178,12 @@ header p{
 
 .header_p{
     width: 280px;
-    height: 14px;
-    font-size: 8px;
+    height: 10px;
+    font-size: 6px;
 }
 
 .hyperlink_p{
-    margin: 25px 0 0 20px;
+    margin: 20px 0 0 20px;
     float: left;
 }
 
@@ -140,8 +195,10 @@ header p{
 .hyperlink_img{
     width: 20px;
     height: 20px;
-    border: 1px solid black;
-    margin-left: 85%;
+    margin-left: 87%;
+}
+.hyperlink_img img{
+    width: 100%;
 } 
 
 /*footer*/
@@ -156,32 +213,14 @@ footer div p{
     font-size: 12px;
     padding-top: 3px;
 }
+/*飘动的header*/
+.editorial {
+  display: block;
+  width: 100%;
+  height: 3em;
+  margin: 0;
+  margin-top: -4px;
+  
+}
     
 }
-
-// .parallax > use{
-//   animation:move-forever 6s linear infinite;
-//   &:nth-child(1){animation-delay:-2s;}
-//   &:nth-child(2){animation-delay:-4s; animation-duration:10s}
-//   &:nth-child(3){animation-delay:-8s; animation-duration:6s}
-// }
-
-// @keyframes move-forever{
-//   0%{transform: translate(-90px , 0%)}
-//   100%{transform: translate(85px , 0%)} 
-// }
-
-
-
-// .editorial {
-//   display: block;
-//   width: 100%;
-//   height: 2em;
-//   margin: 0;
-// }
-
-// .content {
-//   background-color: #29cc57;
-//   min-height: 5vh;
-//   margin: -.1em 0 0 0;
-// }
