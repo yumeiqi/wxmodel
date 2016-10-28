@@ -45,7 +45,7 @@
             "require":1,
             "readonly":0,
             "hide":0,
-            "type":"url",
+            "type":"url"
             },{"name":"item_img",
             "title":"url图片",
             "require":0,

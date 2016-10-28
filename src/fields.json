@@ -1,26 +1,16 @@
 {
-	"title": "",
+	"title": "微信",
 	"digest": "",
-    "theme_color":" ",
+    "theme_color":"#a200ff",
     "hyperlink":[{
         "item_name":"菜单一",
         "item_hyperlink":"http://www.baidu.com",
-        "item_image":" "
+        "item_image":"http://pic2.ooopic.com/10/81/62/18bOOOPICf4.jpg"
 
     },
     {
         "item_name":"菜单二",
         "item_hyperlink":"http://www.baidu.com",
-        "item_image":" "
-    },
-    {
-        "item_name":"菜单三",
-        "item_hyperlink":"http://www.baidu.com",
-        "item_image":" "
-    },
-    {
-        "item_name":"菜单四",
-        "item_hyperlink":"http://www.baidu.com",
-        "item_image":" "
+        "item_image":""
     }]
 }

@@ -7,6 +7,7 @@ body{
     min-height: 100%;
 }
 
+
 p {
     display: block;
     -webkit-margin-before: 0em;
@@ -88,7 +89,7 @@ footer{
     bottom:0px;
     text-align: center;
     left: 0;
-    height: 30px;
+    height: 40px;
     width: 100%;
 }
 
@@ -96,6 +97,7 @@ footer p{
     font-size: 13px;
     padding-top: 6px;
     color: #a3a3a3;
+
 }
 
 footer p span{
@@ -113,9 +115,6 @@ footer  p a{
 
 .parallax > use{
   animation:move-forever 12s linear infinite;
-  &:nth-child(1){animation-delay:-2s;}
-  &:nth-child(2){animation-delay:-4s; animation-duration:10s}
-  &:nth-child(3){animation-delay:-8s; animation-duration:6s}
 }
 
 @keyframes move-forever{
@@ -154,71 +153,71 @@ footer  p a{
 /*iphone5*/
 @media screen and (max-width: 320px) {
 
-    /*header*/
-header{
+        /*header*/
+    header{
 
-    width: 320px;
-    height: 80px;
-    margin-bottom: 20px;
-}
+        width: 320px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
 
-header text{
-    width: 70px;
-    height: 22.5px;    
-    padding: 20px 0 0 25px;
-}
+    header text{
+        width: 70px;
+        height: 22.5px;    
+        padding: 20px 0 0 25px;
+    }
 
-/*内容*/
+    /*内容*/
 
-header p{
-    font-size: 19px;
-}
+    header p{
+        font-size: 19px;
+    }
 
-.header_p{
-    width: 280px;
-    height: 10px;
-    font-size: 6px;
-}
+    .header_p{
+        width: 280px;
+        height: 10px;
+        font-size: 6px;
+    }
 
-.hyperlink_p{
-    margin: 20px 0 0 20px;
-    float: left;
-}
+    .hyperlink_p{
+        margin: 20px 0 0 20px;
+        float: left;
+    }
 
-.hyperlink_p{
-    font-size: 14px;
-    font-weight: 500;
+    .hyperlink_p{
+        font-size: 14px;
+        font-weight: 500;
 
-}
-.hyperlink_img{
-    width: 20px;
-    height: 20px;
-    margin-left: 87%;
-}
-.hyperlink_img img{
-    width: 100%;
-} 
+    }
+    .hyperlink_img{
+        width: 20px;
+        height: 20px;
+        margin-left: 87%;
+    }
+    .hyperlink_img img{
+        width: 100%;
+    } 
 
-/*footer*/
+    /*footer*/
 
 
-footer div{
-    width: 180px;
-    height: 25px;
-}
+    footer div{
+        width: 180px;
+        height: 25px;
+    }
 
-footer div p{
-    font-size: 12px;
-    padding-top: 3px;
-}
-/*飘动的header*/
-.editorial {
-  display: block;
-  width: 100%;
-  height: 1.5em;
-  margin: 0;
-  margin-top: 35px;
-  
-}
+    footer div p{
+        font-size: 12px;
+        padding-top: 3px;
+    }
+    /*飘动的header*/
+    .editorial {
+      display: block;
+      width: 100%;
+      height: 1.5em;
+      margin: 0;
+      margin-top: 35px;
+      
+    }
     
 }
